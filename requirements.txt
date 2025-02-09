@@ -1,0 +1,7 @@
+libs which are used here:
+pyTelegramBotApi (telebot)
+FastAPI
+
+also you need to put into ./config dir:
+token.txt
+bot_password.txt
