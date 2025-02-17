@@ -4,9 +4,9 @@ from models.ApplicationUnit import ApplicationUnit
 class FileHelper:
 
     def get_bot_password(self):
-        return open("config/bot_password.txt", "r").readline()
+        return open("config/bot_password.txt", "r").readline().strip()
     def get_history_count(self):
-        return open("config/history_count.txt", "r").readline()
+        return open("config/history_count.txt", "r").readline().strip()
 
     def increment_history_count(self):
         prev_count = int(self.get_history_count())
@@ -16,7 +16,7 @@ class FileHelper:
         file.close()
 
     def get_token(self):
-        return open("config/token.txt", "r").readline()
+        return open("config/token.txt", "r").readline().strip()
 
     def put_application_unit_to_history(self, application_unit: ApplicationUnit):
         history_count = self.get_history_count()
